@@ -1,0 +1,19 @@
+@import "mixins.scss";
+
+body {
+	width: 100%;
+	height: 100%;
+}
+
+#footer {
+	width: 100%;
+	text-align: center;
+
+	position: absolute;
+	bottom: 0;
+
+	.content {
+		padding: 10px;
+		color: #555;
+	}
+}

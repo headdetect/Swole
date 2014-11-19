@@ -1,8 +1,10 @@
 @import "mixins.scss";
+@import "dashboard/sb-admin-2.scss";
 
 body {
 	width: 100%;
 	height: 100%;
+	padding-top: 0px;
 }
 
 #footer {

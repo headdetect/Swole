@@ -17,7 +17,7 @@ class LoginController extends \BaseController {
 		$username = Input::get("username");
 		$password = Input::get("password");
 
-		if (Auth::attempt(array('username' => $username, 'password' => $password)))
+		if (Auth::attempt(array('username' => $username, 'password' => $password), true))
 		{
 		    return Redirect::intended('dashboard');
 		}
@@ -28,6 +28,7 @@ class LoginController extends \BaseController {
 	public function logout() 
 	{
 		Auth::logout();
+        return Redirect::intended('login');
 	}
 
 

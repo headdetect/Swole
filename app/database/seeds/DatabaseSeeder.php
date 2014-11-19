@@ -15,13 +15,11 @@ class UserTableSeeder extends Seeder {
 
     public function run()
     {
-    	Eloquent::unguard();
+        Eloquent::unguard();
         User::create(array(
-        	'username' => 'admin',
-        	'password' => Hash::make('password')
+            'username' => 'admin',
+            'password' => Hash::make('password')
         ));
-
-        
     }
 
 }

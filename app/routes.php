@@ -13,6 +13,10 @@
 
 Route::get('/',           'DashboardController@index');
 Route::get('/dashboard',  'DashboardController@index');
+Route::get('/meals',      'MealsController@index');
+Route::get('/workouts',   'WorkoutsController@index');
+Route::get('/menus',      'MenuController@index');
+Route::get('/user',       'UserController@index');
 Route::get('/login',      'LoginController@index');
 Route::get('/logout',     'LoginController@logout');
 

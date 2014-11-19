@@ -2,6 +2,8 @@
 
 return array(
 
+	'version' => '0.0.0a',
+
 	/*
 	|--------------------------------------------------------------------------
 	| Application Debug Mode
@@ -78,7 +80,7 @@ return array(
 	|
 	*/
 
-	'key' => 'YourSecretKey!!!',
+	'key' => 'DisAShoutOutToKDotYaBish',
 
 	'cipher' => MCRYPT_RIJNDAEL_128,
 

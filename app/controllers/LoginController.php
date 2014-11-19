@@ -12,22 +12,22 @@ class LoginController extends \BaseController {
 		return View::make("login");
 	}
 
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  string username
-	 * @param  string passwurdDawg
-	 * @return Response
-	 */
-	public function login($username, $pacwurrrd)
+	public function login()
 	{
+		$username = Input::get("username");
+		$password = Input::get("password");
+
 		if (Auth::attempt(array('username' => $username, 'password' => $password)))
 		{
 		    return Redirect::intended('dashboard');
 		}
 
-		App::abort(403, 'Unauthorized action.');
+		return View::make("login")->with(array("successful" => "false"));
+	}
+
+	public function logout() 
+	{
+		Auth::logout();
 	}
 
 

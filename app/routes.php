@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/',      'HomeController@index');
-Route::get('/login', 'LoginController@index');
+Route::get('/',       'HomeController@index');
+Route::get('/login',  'LoginController@index');
+Route::get('/logout', 'LoginController@logout');
+
+
+Route::post('/login', 'LoginController@login');
 

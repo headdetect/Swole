@@ -1,12 +1,17 @@
 @import "mixins.scss";
 
 body {
-	background: #eee !important;	
+	background: #efefef;	
 }
 
 .wrapper {	
 	margin-top: 80px;
-  margin-bottom: 80px;
+ 	margin-bottom: 80px;
+}
+
+.login-footer {
+	padding: 15px;
+	color: #555;
 }
 
 .form-signin {
@@ -17,6 +22,7 @@ body {
   border: 1px solid rgba(0,0,0,0.1);  
 
   .form-signin-heading,
+
 	.checkbox {
 	  margin-bottom: 30px;
 	}

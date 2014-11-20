@@ -14,7 +14,7 @@ class MealsController extends \BaseController {
 			return Redirect::intended('login');
 		}
 
-		return View::make('meals');
+		return View::make('meals/main');
 	}
 
 
@@ -25,7 +25,12 @@ class MealsController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		if (!Auth::check()) 
+		{
+			return Redirect::intended('login');
+		}
+
+		return View::make('meals/create');
 	}
 
 	/**

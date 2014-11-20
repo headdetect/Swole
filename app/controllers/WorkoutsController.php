@@ -14,7 +14,7 @@ class WorkoutsController extends \BaseController {
 			return Redirect::intended('login');
 		}
 
-		return View::make('workouts');
+		return View::make('workouts/main');
 	}
 
 

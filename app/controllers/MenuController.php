@@ -14,7 +14,7 @@ class MenuController extends \BaseController {
 			return Redirect::intended('login');
 		}
 
-		return View::make('menus');
+		return View::make('menus/main');
 	}
 
 

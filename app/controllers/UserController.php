@@ -14,7 +14,7 @@ class UserController extends \BaseController {
 			return Redirect::intended('login');
 		}
 
-		return View::make('user');
+		return View::make('user/main');
 	}
 
 

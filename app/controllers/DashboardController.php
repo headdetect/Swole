@@ -10,7 +10,7 @@ class DashboardController extends BaseController {
 			return Redirect::intended('login');
 		}
 
-		return View::make('dashboard');
+		return View::make('dashboard/main');
 	}
 
 }

@@ -1,0 +1,70 @@
+{% extends "../swole.twig" %}
+
+{% block title %}Meals{% endblock %}
+{% block page_header %}
+	Create Meal
+{% endblock %}
+
+{% block content %}
+	<form class="form-horizontal" role="form">
+		<div class="form-group">
+			<label for="txtName" class="col-sm-1 col-xs-12 control-label">Name</label>
+			<div class="col-sm-4 col-xs-12">
+				<input type="text" class="form-control" id="txtName" placeholder="Eg. Eggs Benedict">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="txtDesc" class="col-sm-1 col-xs-12 control-label">Description</label>
+			<div class="col-sm-4 col-xs-12">
+				<textarea class="form-control" id="txtDesc" placeholder="Eg. Tasty eggs of sorts... "></textarea>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-1 col-xs-12 control-label">Recipe</label>
+			<div class="col-sm-4 col-xs-12">
+				<div class="list-group">
+					<a href="#" class="list-group-item list-group-item-success text-right"><i class="fa fa-plus fa-fw"></i> Add Recipe Item</a>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="txtCals" class="col-sm-1 col-xs-12 control-label">Calories</label>
+			<div class="col-sm-2 col-xs-12">
+				<input type="number" class="form-control" id="txtCals">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="txtProtein" class="col-sm-1 col-xs-12 control-label">Protein</label>
+			<div class="col-sm-2 col-xs-12">
+				<div class="input-group">
+					<input type="number" class="form-control" id="txtProtien">
+  					<span class="input-group-addon">Grams</span>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="txtFat" class="col-sm-1 col-xs-12 control-label">Fat</label>
+			<div class="col-sm-2">
+				<div class="input-group">
+					<input type="number" class="form-control" id="txtFat">
+  					<span class="input-group-addon">Grams</span>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="txtCost" class="col-sm-1 col-xs-12 control-label">Cost Per Meal</label>
+			<div class="col-sm-2 col-xs-12">
+				<div class="input-group">
+  					<span class="input-group-addon">$</span>
+					<input type="text" class="form-control" id="txtCost">
+				</div>
+			</div>
+		</div>
+	</form>
+{% endblock %}
+
+{% block content_footer %}
+	<div class="section-footer">
+		<button class="btn btn-lg btn-success pull-right">Create Meal</button>
+	</div>
+{% endblock %}

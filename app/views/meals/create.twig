@@ -22,8 +22,8 @@
 		<div class="form-group">
 			<label class="col-sm-1 col-xs-12 control-label">Recipe</label>
 			<div class="col-sm-4 col-xs-12">
-				<div class="list-group">
-					<a href="#" class="list-group-item list-group-item-success text-right"><i class="fa fa-plus fa-fw"></i> Add Recipe Item</a>
+				<div class="list-group" id="lstIngredients">
+					<a href="javascript:void(0);" id="btnAddIngredient" class="list-group-item list-group-item-success text-right"><i class="fa fa-plus fa-fw"></i> Add Recipe Item</a>
 				</div>
 			</div>
 		</div>
@@ -67,4 +67,18 @@
 	<div class="section-footer">
 		<button class="btn btn-lg btn-success pull-right">Create Meal</button>
 	</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+	$("#btnAddIngredient").click(function() {
+		var listItem = $("<a class='list-group-item'></a>");
+
+		// TODO: Dialog
+
+		listItem.text("3 Gallons of Juice");
+
+		$(this).before(listItem);
+	});
+</script>
 {% endblock %}

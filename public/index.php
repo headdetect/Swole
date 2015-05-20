@@ -34,9 +34,6 @@ require __DIR__.'/../bootstrap/autoload.php';
 
 $app = require_once __DIR__.'/../bootstrap/start.php';
 
-// Compile all the sass files into css //
-SassCompiler::run("scss/", "css/");
-
 /*
 |--------------------------------------------------------------------------
 | Run The Application

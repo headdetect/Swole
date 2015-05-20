@@ -125,7 +125,8 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
 		// Installed //
-		'TwigBridge\ServiceProvider'
+		'TwigBridge\ServiceProvider',
+        'Zizaco\Lessy\LessyServiceProvider'
 	),
 
 	/*
@@ -195,7 +196,6 @@ return array(
 
 		// Installed //
 		'Twig' => 'TwigBridge\Facade\Twig',
-
 	),
 
 );

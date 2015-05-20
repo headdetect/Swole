@@ -1,5 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\View;
+
 class WorkoutsController extends \BaseController {
 
 	/**
@@ -16,6 +20,16 @@ class WorkoutsController extends \BaseController {
 
 		return View::make('workouts/main');
 	}
+
+    public function make()
+    {
+        if (!Auth::check())
+        {
+            return Redirect::intended('login');
+        }
+
+        return View::make('workouts/make');
+    }
 
 
 	/**

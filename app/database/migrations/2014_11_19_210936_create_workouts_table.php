@@ -12,7 +12,15 @@ class CreateWorkoutsTable extends Migration {
 	 */
 	public function up()
 	{
-		//
+        Schema::create('workouts', function($table)
+        {
+            $table->increments('id');
+            $table->string('name');
+            $table->text('description');
+            $table->integer('number_of_reps');
+            $table->integer('number_of_sets');
+            $table->timestamps();
+        });
 	}
 
 	/**

@@ -1,8 +1,11 @@
 {% extends "../swole.twig" %}
 
 {% block title %}Workouts{% endblock %}
-{% block page_header %}Workouts{% endblock %}
+{% block page_header %}Workouts <a href="workouts/create" class="btn btn-success pull-right">Create New Workout <i class="fa fa-plus fa-fw"></i></a>{% endblock %}
 
 {% block content %}
-	TODO: Insert workout goodness here.
+	{% for workout in workouts %}
+    {% else %}
+        You don't have any workouts. Why don't you go <a href="workouts/create">create some workouts</a>.
+    {% endfor %}
 {% endblock %}

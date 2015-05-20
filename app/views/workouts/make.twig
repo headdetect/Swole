@@ -1,0 +1,65 @@
+{% extends "../swole.twig" %}
+
+{% block styles %}
+    <link href="/css/summernote.css" type="text/css" rel="stylesheet"/>
+{% endblock %}
+{% block title %}Create Workout{% endblock %}
+{% block page_header %}Create Workout{% endblock %}
+
+{% block content %}
+    <div class="col-xs-6">
+        <form class="form-horizontal" method="post">
+            <div class="form-group">
+                <label for="name" class="col-sm-3 control-label">Name of Workout</label>
+
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="name" placeholder="Push Ups">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="reps" class="col-sm-3 control-label"># of Reps</label>
+
+                <div class="col-sm-3">
+                    <input type="number" class="form-control" id="reps" placeholder="10">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="sets" class="col-sm-3 control-label"># of Sets</label>
+
+                <div class="col-sm-3">
+                    <input type="number" class="form-control" id="sets" placeholder="2">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="description" class="col-sm-3 control-label">Description</label>
+
+                <div class="col-sm-9">
+                    <textarea class="form-control" id="description">
+                    </textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-3 col-sm-9">
+                    <button type="submit" class="btn btn-success">Create Workout</button>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="/js/plugins/summernote.min.js"></script>
+    <script>
+        $("#description").summernote({
+            height: 300,
+            minHeight: null,
+            maxHeight: null,
+            toolbar:[
+                ['insert', ['picture', 'link', 'video', 'table', 'hr']],
+                ['style', ['bold', 'italic', 'underline', 'clear']],
+                ['font', ['strikethrough', 'superscript', 'subscript']],
+                ['fontsize', ['fontsize']]
+            ]
+        });
+    </script>
+{% endblock %}

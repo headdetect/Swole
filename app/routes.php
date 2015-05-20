@@ -17,7 +17,9 @@ Route::get('/dashboard',  'DashboardController@index');
 Route::get('/meals',         'MealsController@index');
 Route::get('/meals/create',  'MealsController@create');
 
-Route::get('/workouts',   'WorkoutsController@index');
+Route::get('/workouts',             'WorkoutsController@index');
+Route::get('/workouts/create',      'WorkoutsController@make');
+Route::post('/workouts/create',     'WorkoutsController@create');
 
 Route::get('/menus',      'MenuController@index');
 
